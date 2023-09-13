@@ -30,8 +30,9 @@ input.addEventListener("keydown", function (ev) {
   }
 })
 
-document.getElementById("equal").addEventListener("click", calculate)
 
+// Erro caso equação inválida.
+document.getElementById("equal").addEventListener("click", calculate)
 function calculate() {
   resultInput.value = "ERROR"
   resultInput.classList.add("error")
@@ -40,6 +41,7 @@ function calculate() {
   resultInput.classList.remove("error")
 }
 
+// Evento para botão de copiar
 document.getElementById('copyToClipboard').addEventListener('click', function (ev) {
     const button = ev.currentTarget
     if (button.innerText === 'Copiar') {
@@ -52,6 +54,7 @@ document.getElementById('copyToClipboard').addEventListener('click', function (e
     }
 })
 
+// Mudança de tema - claro e escuro
 document.getElementById('themeSwitcher').addEventListener('click', function () {
     if (main.dataset.theme === 'dark') {
         root.style.setProperty('--bg-color', '#f1f5f9')
